@@ -1,0 +1,5 @@
+<COMMENT value="// this variable represents the vector size" />
+<TYPE value="int" /><WHITESPACE /><IDENTIFIER value="v" /><SEMICOLON />
+
+<COMMENT value="// should add v to another crazy number" />
+<TYPE value="int" /><WHITESPACE /><IDENTIFIER value="r" /><WHITESPACE /><EQUALS /><WHITESPACE /><NUMBER value="3.14" /><WHITESPACE /><ARITMETHIC_OP value="*" /><WHITESPACE /><IDENTIFIER value="v" /><WHITESPACE /><ARITMETHIC_OP value="/" /><WHITESPACE /><NUMBER value="3" /><SEMICOLON />
