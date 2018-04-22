@@ -47,24 +47,13 @@ public class TokenParser {
     }
 
     private Token getNextToken(final String content) {
-//        List<Token> extractedTokens = extractors
-//                .stream()
-//                .map(tokenExtractor -> tokenExtractor.extract(content))
-//                .filter(Objects::nonNull)
-//                .collect(Collectors.toList());
-
-        List<Token> extractedTokens = new ArrayList<>();
         for (TokenExtractor extractor : extractors) {
             Token token = extractor.extract(content);
             if (token != null) {
                 return token;
             }
         }
-
-        if (extractedTokens.size() > 1) {
-            throw new RuntimeException("Ambiguidade encontrada!");
-        }
-
+        
         throw new RuntimeException("Could't find an extractor for \"" + content + "\"");
     }
 }
